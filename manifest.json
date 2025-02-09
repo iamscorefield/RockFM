@@ -9,12 +9,12 @@
   "description": "Rock City FM Radio Web Application",
   "icons": [
     {
-      "src": "icon-192x192.png",
+      "src": "/RockFM/icon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "icon-512x512.png",
+      "src": "/RockFM/icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -63,13 +63,13 @@
       "name": "Listen Live",
       "short_name": "Listen",
       "url": "/RockFM/listen",
-      "icons": [{"src": "icon-192x192.png", "sizes": "192x192"}]
+      "icons": [{"src": "/RockFM/icon-192x192.png", "sizes": "192x192"}]
     },
     {
       "name": "Contact Us",
       "short_name": "Contact",
       "url": "/RockFM/contact",
-      "icons": [{"src": "icon-192x192.png", "sizes": "192x192"}]
+      "icons": [{"src": "/RockFM/icon-192x192.png", "sizes": "192x192"}]
     }
   ],
   "widgets": [
@@ -77,7 +77,7 @@
       "name": "Rock City FM Widget",
       "short_name": "RockCityWidget",
       "url": "/RockFM/widget",
-      "icons": [{"src": "icon-192x192.png", "sizes": "192x192"}]
+      "icons": [{"src": "/RockFM/icon-192x192.png", "sizes": "192x192"}]
     }
   ],
   "launch_handler": {
@@ -85,12 +85,12 @@
   },
   "screenshots": [
     {
-      "src": "screenshot1.png",
+      "src": "/RockFM/screenshot1.png",
       "sizes": "640x480",
       "type": "image/png"
     },
     {
-      "src": "screenshot2.png",
+      "src": "/RockFM/screenshot2.png",
       "sizes": "640x480",
       "type": "image/png"
     }
