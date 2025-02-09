@@ -57,3 +57,11 @@ self.addEventListener('push', event => {
     self.registration.showNotification('Rock City FM', options)
   );
 });
+
+self.addEventListener('backgroundfetchsuccess', event => {
+  console.log('Background fetch success:', event);
+});
+
+self.addEventListener('backgroundfetchfail', event => {
+  console.log('Background fetch fail:', event);
+});
