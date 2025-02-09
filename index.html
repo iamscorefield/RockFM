@@ -12,7 +12,6 @@
             navigator.serviceWorker.register('service-worker.js')
             .then(function(registration) {
                 console.log('Service Worker registered with scope:', registration.scope);
-                return registration.sync.register('sync-tag');
             })
             .catch(function(error) {
                 console.log('Service Worker registration failed:', error);
@@ -29,7 +28,7 @@
 
     <!-- Menu Icon -->
     <div class="menu-icon" onclick="toggleMenu()">
-        <img src="icon-192x192.png" alt="Radio Icon" class="radio-icon"> <i class="fas fa-bars"></i>
+        <img src="icon.png" alt="Radio Icon" class="radio-icon"> <i class="fas fa-bars"></i>
     </div>
 
     <!-- Side Menu -->
