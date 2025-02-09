@@ -35,6 +35,7 @@ self.addEventListener('sync', event => {
 
 async function syncFunction() {
   console.log('Sync function executed');
+  // Perform your background sync operations here
 }
 
 self.addEventListener('periodicsync', event => {
@@ -45,6 +46,7 @@ self.addEventListener('periodicsync', event => {
 
 async function periodicSyncFunction() {
   console.log('Periodic sync function executed');
+  // Perform your periodic sync operations here
 }
 
 self.addEventListener('push', event => {
