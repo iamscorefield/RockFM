@@ -32,7 +32,7 @@
             Notification.requestPermission().then(function(permission) {
                 if (permission === 'granted') {
                     navigator.serviceWorker.ready.then(function(registration) {
-                        fetch('/vapidPublicKey')
+                        fetch('/RockFM/vapidPublicKey')
                         .then(function(response) {
                             return response.arrayBuffer();
                         })
