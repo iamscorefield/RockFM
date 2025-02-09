@@ -35,7 +35,9 @@
       }
     }
   ],
-  "handle_links": ["http://*", "https://*"],
+  "handle_links": {
+    "urls": ["https://iamscorefield.github.io/RockFM/*"]
+  },
   "protocol_handlers": [
     {
       "protocol": "web+rockcityfm",
