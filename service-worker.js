@@ -41,3 +41,15 @@ async function syncFunction() {
   // Implementation of your background sync logic
   console.log('Sync function executed');
 }
+
+// Adding Push Notifications
+self.addEventListener('push', event => {
+  const options = {
+    body: event.data.text(),
+    icon: 'icon-192x192.png',
+    badge: 'icon-192x192.png'
+  };
+  event.waitUntil(
+    self.registration.showNotification('Rock City FM', options)
+  );
+});
