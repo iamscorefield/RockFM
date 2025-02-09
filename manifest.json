@@ -39,5 +39,8 @@
   ],
   "related_applications": [],
   "scope_extensions": [],
-  "launch_handler": {}
+  "launch_handler": {
+    "client_mode": "auto"
+  },
+  "iarc_rating_id": "e.g. IARC12345"
 }
