@@ -29,3 +29,15 @@ self.addEventListener('fetch', event => {
       })
   );
 });
+
+// Adding background sync functionality
+self.addEventListener('sync', event => {
+  if (event.tag === 'sync-tag') {
+    event.waitUntil(syncFunction());
+  }
+});
+
+async function syncFunction() {
+  // Implementation of your background sync logic
+  console.log('Sync function executed');
+}
