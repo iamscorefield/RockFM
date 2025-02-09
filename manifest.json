@@ -1,17 +1,21 @@
-const radioGif = document.getElementById('radio-gif');
-const audioPlayer = document.getElementById('audio-player');
-const sideMenu = document.getElementById('sideMenu');
-
-radioGif.addEventListener('click', () => {
-    if (audioPlayer.paused) {
-        audioPlayer.play();
-        console.log("Playback started.");
-    } else {
-        audioPlayer.pause();
-        console.log("Playback paused.");
+{
+  "name": "Rock City FM",
+  "short_name": "RockCityFM",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "Rock City FM Radio Web Application",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
-});
-
-function toggleMenu() {
-    sideMenu.classList.toggle('open');
+  ],
+  "theme_color": "#000000"
 }
