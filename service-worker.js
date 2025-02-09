@@ -6,7 +6,7 @@ const urlsToCache = [
   '/RockFM/script.js',
   '/RockFM/background.gif',
   '/RockFM/icon-192x192.png',
-  '/RockFM/icon-512x512.png'
+  '/RockFM/icon1.png'
 ];
 
 self.addEventListener('install', event => {
