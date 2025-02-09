@@ -95,5 +95,9 @@
   ],
   "iarc_rating_id": "IARC12345",
   "related_applications": [],
-  "scope_extensions": []
+  "scope_extensions": [],
+  "edge_side_panel": {
+    "title": "Rock City FM",
+    "description": "Listen to Rock City FM directly from the Edge side panel."
+  }
 }
