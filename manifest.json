@@ -36,5 +36,8 @@
       "sizes": "640x480",
       "type": "image/png"
     }
-  ]
+  ],
+  "related_applications": [],
+  "scope_extensions": [],
+  "launch_handler": {}
 }
