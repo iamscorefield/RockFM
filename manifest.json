@@ -24,5 +24,76 @@
   "dir": "ltr",
   "lang": "en",
   "categories": ["music", "radio", "entertainment"],
-  "orientation": "any"
+  "orientation": "any",
+  "display_override": ["standalone", "window-controls-overlay"],
+  "file_handlers": [
+    {
+      "action": "/RockFM/open-file",
+      "accept": {
+        "application/pdf": [".pdf"],
+        "image/*": [".png", ".jpg", ".jpeg"]
+      }
+    }
+  ],
+  "handle_links": ["http://*", "https://*"],
+  "protocol_handlers": [
+    {
+      "protocol": "web+rockcityfm",
+      "url": "/RockFM/?url=%s"
+    }
+  ],
+  "share_target": {
+    "action": "/RockFM/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "share-title",
+      "text": "share-text",
+      "url": "share-url",
+      "files": [{
+        "name": "share-file",
+        "accept": ["*/*"]
+      }]
+    }
+  },
+  "shortcuts": [
+    {
+      "name": "Listen Live",
+      "short_name": "Listen",
+      "url": "/RockFM/listen",
+      "icons": [{"src": "icon-192x192.png", "sizes": "192x192"}]
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "url": "/RockFM/contact",
+      "icons": [{"src": "icon-192x192.png", "sizes": "192x192"}]
+    }
+  ],
+  "widgets": [
+    {
+      "name": "Rock City FM Widget",
+      "short_name": "RockCityWidget",
+      "url": "/RockFM/widget",
+      "icons": [{"src": "icon-192x192.png", "sizes": "192x192"}]
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "auto"
+  },
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "sizes": "640x480",
+      "type": "image/png"
+    },
+    {
+      "src": "screenshot2.png",
+      "sizes": "640x480",
+      "type": "image/png"
+    }
+  ],
+  "iarc_rating_id": "IARC12345",
+  "related_applications": [],
+  "scope_extensions": []
 }
