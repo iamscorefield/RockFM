@@ -1,45 +1,21 @@
 {
   "name": "Rock City FM",
   "short_name": "RockCityFM",
-  "id": "/RockCityFM",
   "start_url": "/",
-  "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "description": "Rock City FM Radio Web Application",
   "icons": [
     {
-      "src": "icon-192x192.png",
+      "src": "icon.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "icon-512x512.png",
+      "src": "icon.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "theme_color": "#3663c1",
-  "prefer_related_applications": false,
-  "dir": "ltr",
-  "lang": "en",
-  "categories": [
-    "music",
-    "radio",
-    "entertainment"
-  ],
-  "orientation": "any",
-  "screenshots": [
-    {
-      "src": "screenshot1.png",
-      "sizes": "640x480",
-      "type": "image/png"
-    },
-    {
-      "src": "screenshot2.png",
-      "sizes": "640x480",
-      "type": "image/png"
-    }
-  ],
-  "launch_handler": {}
+  "theme_color": "#000000"
 }
