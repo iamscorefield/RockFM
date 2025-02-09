@@ -12,26 +12,56 @@
             navigator.serviceWorker.register('service-worker.js')
             .then(function(registration) {
                 console.log('Service Worker registered with scope:', registration.scope);
+
+                if ('sync' in registration) {
+                    registration.sync.register('sync-tag');
+                }
+
+                if ('periodicSync' in registration) {
+                    registration.periodicSync.register('periodic-sync-tag', {
+                        minInterval: 24 * 60 * 60 * 1000
+                    });
+                }
             })
             .catch(function(error) {
                 console.log('Service Worker registration failed:', error);
+            });
+        }
+
+        if ('Notification' in window && 'serviceWorker' in navigator) {
+            Notification.requestPermission().then(function(permission) {
+                if (permission === 'granted') {
+                    navigator.serviceWorker.ready.then(function(registration) {
+                        fetch('/vapidPublicKey')
+                        .then(function(response) {
+                            return response.arrayBuffer();
+                        })
+                        .then(function(key) {
+                            registration.pushManager.subscribe({
+                                userVisibleOnly: true,
+                                applicationServerKey: new Uint8Array(key)
+                            }).then(function(subscription) {
+                                console.log('Push subscription:', subscription);
+                            }).catch(function(error) {
+                                console.error('Push subscription error:', error);
+                            });
+                        });
+                    });
+                }
             });
         }
     </script>
 </head>
 <body>
 
-    <!-- Background GIF -->
     <div class="background-gif">
         <img id="radio-gif" src="background.gif" alt="Radio Tunes GIF">
     </div>
 
-    <!-- Menu Icon -->
     <div class="menu-icon" onclick="toggleMenu()">
-        <img src="icon.png" alt="Radio Icon" class="radio-icon"> <i class="fas fa-bars"></i>
+        <img src="icon-192x192.png" alt="Radio Icon" class="radio-icon"> <i class="fas fa-bars"></i>
     </div>
 
-    <!-- Side Menu -->
     <div class="side-menu" id="sideMenu">
         <a href="https://rockcityfmradio.com/" target="_blank"><i class="fas fa-globe"></i> Website</a>
         <a href="https://web.facebook.com/RockCityFMRadio/?ref=embed_page" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
@@ -42,7 +72,6 @@
         <a href="https://rockcitybooking.com/" target="_blank"><i class="fas fa-podcast"></i> Book Airtime</a>
     </div>
 
-    <!-- Audio Player (hidden) -->
     <audio id="audio-player" src="https://stream.zeno.fm/g6qax5vq0v8uv" style="display: none;"></audio>
 
     <script src="script.js"></script>
